@@ -1,6 +1,6 @@
 import { fetch } from 'undici';
 
-export default async function ({ req, res }) {
+export default async function main({ req, res }) {
   if (req.path === '/eur') {
     const amountInEuros = Number(req.query.amount);
     const response = await fetch('https://api.exchangerate.host/latest?base=EUR&symbols=USD');
